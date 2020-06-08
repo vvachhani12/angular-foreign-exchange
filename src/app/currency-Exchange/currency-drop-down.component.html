@@ -1,0 +1,8 @@
+<div class="dropdown">
+    <select (change)="foreignCurrency($event.target.value)" class="drop-down">
+        <!-- <option value="0">select currency</option> -->
+        <option *ngFor="let summary of summaries" value={{summary.currency}}>
+        {{summary.currency}}
+        </option>
+    </select>
+</div>

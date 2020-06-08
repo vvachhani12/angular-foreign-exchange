@@ -1,0 +1,15 @@
+.trans-type {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.trans-rate {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+}
+
+.trans {
+    border: 1px solid black;
+}

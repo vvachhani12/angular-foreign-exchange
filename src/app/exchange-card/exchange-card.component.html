@@ -1,0 +1,32 @@
+<div class="card container">
+    <div class="card-header" >
+        Currency Buy and Sell
+    </div>
+
+    <div class="card-body">
+        <div  #appenHere></div>
+        <div class="card currency button">
+            <button
+                type="button"
+                class="btn btn-success btn-circle btn-xl"
+                (click)='addNewComponent()'
+            >
+              <fa-icon [icon]="faPlus"></fa-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="currency-trans row" >
+        <div class="col-lg-4">
+            <div #currencyTrans></div>
+        </div>
+        <div class="col-lg-8">
+            <pm-currency-grid
+                [currencyPair]="currencyPair"
+                [dealRates]="dealRates"
+                [direction]="direction"
+                [currencyAmount]="currencyAmount"
+            ></pm-currency-grid>
+        </div>
+    </div>
+</div>

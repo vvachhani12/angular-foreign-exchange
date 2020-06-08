@@ -1,0 +1,45 @@
+<div class="card currency">
+    <div class="card-body">
+        <div class="row" style="height: 40px">
+            <div class="col-mid-10 dropdown">
+                <pm-currency-drop-down (changeCurrency)="onChangeCurrency($event)"></pm-currency-drop-down>
+            </div>
+            <div class="col-mid-2">
+                <button type="button" class="btn-danger remove-card" (click)='removeObject()'>
+                    X
+                    <!-- <i class="fa fa-remove"></i> -->
+                </button>
+            </div>
+        </div>
+        <div class="row" style="height: 40px">
+            <div class="col-mid-12 currency-value">
+                <select class="custom-select" id="inputGroupSelect01" (change)="currencyAmount($event.target.value)">
+                    <option *ngFor="let amount of exchangeAmt" value={{amount.value}}>
+                        {{amount.value}}
+                    </option>
+                  </select>
+            </div>
+        </div>
+        <div class="row" style="height: 78px">
+            <div class="col-mid-6 button">
+                <button type="button" class="bid-button" (click)="addTrans('Buy')">
+                    <div class="row bid" style="display: flow-root">
+                        Bid
+                    </div>
+                    <div class="row bid-price" style="display: flow-root" [innerHtml]="bidPrice">
+                    </div>
+                </button>
+            </div>
+            <div class="col-mid-6 button">
+                <button type="button" class="ask-button" (click)="addTrans('Sell')">
+                    <div class="row ask" style="display: flow-root">
+                        Ask
+                    </div>
+                    <div class="row ask-price" style="display: flow-root"  [innerHtml]="askPrice">
+                    </div>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
